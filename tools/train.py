@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 # ------------------------------------------------------------------------------
 # Copyright (c) Microsoft
 # Licensed under the MIT License.
@@ -22,7 +24,10 @@ import torch.utils.data.distributed
 import torchvision.transforms as transforms
 from tensorboardX import SummaryWriter
 
+sys.path.append('./tools')
 import _init_paths
+
+sys.path.append('./lib')
 from config import cfg
 from config import update_config
 from core.loss import JointsMSELoss

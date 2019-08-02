@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 # ------------------------------------------------------------------------------
 # pose.pytorch
 # Copyright (c) 2018-present Microsoft
@@ -11,6 +13,7 @@ from __future__ import print_function
 
 import argparse
 import os
+import sys
 import pprint
 
 import torch
@@ -21,7 +24,10 @@ import torch.utils.data
 import torch.utils.data.distributed
 import torchvision.transforms as transforms
 
+sys.path.append('./tools')
 import _init_paths
+
+sys.path.append('./lib')
 from config import cfg
 from config import update_config
 from core.loss import JointsMSELoss

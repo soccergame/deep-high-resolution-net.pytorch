@@ -1,0 +1,105 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>07d28034-066a-4f78-97d9-1ee655a7f5cb</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>HRNet</Name>
+    <RootNamespace>HRNet</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="experiments\coco\hrnet\w32_256x192_adam_lr1e-3.yaml" />
+    <Content Include="experiments\coco\hrnet\w32_384x288_adam_lr1e-3.yaml" />
+    <Content Include="experiments\coco\hrnet\w48_256x192_adam_lr1e-3.yaml" />
+    <Content Include="experiments\coco\hrnet\w48_384x288_adam_lr1e-3.yaml" />
+    <Content Include="experiments\coco\resnet\res101_256x192_d256x3_adam_lr1e-3.yaml" />
+    <Content Include="experiments\coco\resnet\res101_384x288_d256x3_adam_lr1e-3.yaml" />
+    <Content Include="experiments\coco\resnet\res152_256x192_d256x3_adam_lr1e-3.yaml" />
+    <Content Include="experiments\coco\resnet\res152_384x288_d256x3_adam_lr1e-3.yaml" />
+    <Content Include="experiments\coco\resnet\res50_256x192_d256x3_adam_lr1e-3.yaml" />
+    <Content Include="experiments\coco\resnet\res50_384x288_d256x3_adam_lr1e-3.yaml" />
+    <Content Include="experiments\mpii\hrnet\w32_256x256_adam_lr1e-3.yaml" />
+    <Content Include="experiments\mpii\hrnet\w48_256x256_adam_lr1e-3.yaml" />
+    <Content Include="experiments\mpii\resnet\res101_256x256_d256x3_adam_lr1e-3.yaml" />
+    <Content Include="experiments\mpii\resnet\res152_256x256_d256x3_adam_lr1e-3.yaml" />
+    <Content Include="experiments\mpii\resnet\res50_256x256_d256x3_adam_lr1e-3.yaml" />
+    <Content Include="figures\hrnet.png" />
+    <Content Include="lib\Makefile" />
+    <Content Include="lib\nms\cpu_nms.pyx" />
+    <Content Include="lib\nms\gpu_nms.cu" />
+    <Content Include="lib\nms\gpu_nms.hpp" />
+    <Content Include="lib\nms\gpu_nms.pyx" />
+    <Content Include="lib\nms\nms_kernel.cu" />
+    <Content Include="LICENSE" />
+    <Content Include="README.md" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="experiments\" />
+    <Folder Include="experiments\coco\" />
+    <Folder Include="experiments\coco\hrnet\" />
+    <Folder Include="experiments\coco\resnet\" />
+    <Folder Include="experiments\mpii\" />
+    <Folder Include="experiments\mpii\hrnet\" />
+    <Folder Include="experiments\mpii\resnet\" />
+    <Folder Include="figures\" />
+    <Folder Include="lib\" />
+    <Folder Include="lib\config\" />
+    <Folder Include="lib\core\" />
+    <Folder Include="lib\dataset\" />
+    <Folder Include="lib\models\" />
+    <Folder Include="lib\nms\" />
+    <Folder Include="lib\utils\" />
+    <Folder Include="tools\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="lib\config\default.py" />
+    <Compile Include="lib\config\models.py" />
+    <Compile Include="lib\config\__init__.py" />
+    <Compile Include="lib\core\evaluate.py" />
+    <Compile Include="lib\core\function.py" />
+    <Compile Include="lib\core\inference.py" />
+    <Compile Include="lib\core\loss.py" />
+    <Compile Include="lib\dataset\coco.py" />
+    <Compile Include="lib\dataset\JointsDataset.py" />
+    <Compile Include="lib\dataset\mpii.py" />
+    <Compile Include="lib\dataset\__init__.py" />
+    <Compile Include="lib\models\pose_hrnet.py" />
+    <Compile Include="lib\models\pose_resnet.py" />
+    <Compile Include="lib\models\__init__.py" />
+    <Compile Include="lib\nms\nms.py" />
+    <Compile Include="lib\nms\setup_linux.py" />
+    <Compile Include="lib\nms\__init__.py" />
+    <Compile Include="lib\utils\transforms.py" />
+    <Compile Include="lib\utils\utils.py" />
+    <Compile Include="lib\utils\vis.py" />
+    <Compile Include="lib\utils\zipreader.py" />
+    <Compile Include="lib\utils\__init__.py" />
+    <Compile Include="tools\test.py" />
+    <Compile Include="tools\train.py" />
+    <Compile Include="tools\_init_paths.py" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
