@@ -5,8 +5,7 @@
     <ProjectGuid>07d28034-066a-4f78-97d9-1ee655a7f5cb</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>tools\train.py</StartupFile>
-    <SearchPath>
-    </SearchPath>
+    <SearchPath>..\HRNet;lib;tools</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>HRNet</Name>
@@ -14,6 +13,7 @@
     <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
     <IsWindowsApplication>False</IsWindowsApplication>
     <InterpreterId>Global|PythonCore|3.7</InterpreterId>
+    <SuppressPackageInstallationPrompt>True</SuppressPackageInstallationPrompt>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -97,7 +97,6 @@
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.7" />
-    <InterpreterReference Include="Global|VisualStudio|Python37_64" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

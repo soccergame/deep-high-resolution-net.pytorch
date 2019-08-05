@@ -42,7 +42,6 @@ from utils.utils import get_model_summary
 import dataset
 import models
 
-
 def parse_args():
     parser = argparse.ArgumentParser(description='Train keypoints network')
     # general
