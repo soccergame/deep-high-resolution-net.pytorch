@@ -8,10 +8,13 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
+import os
+import sys
 import numpy as np
 
-from .cpu_nms import cpu_nms
-from .gpu_nms import gpu_nms
+sys.path.append(os.path.dirname(__file__))
+from cpu_nms import cpu_nms
+from gpu_nms import gpu_nms
 
 
 def py_nms_wrapper(thresh):
